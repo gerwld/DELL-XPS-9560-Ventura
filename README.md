@@ -1,6 +1,6 @@
-# XPS-9560-OpenCore
-Working EFI for Monterey (up to Ventura). Lower OS versions were not tested but may work. Higher as well.
-Based on [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg) & old fork from [NOTNlCE-OpenCore](https://github.com/NOTNlCE/XPS-9560-OpenCore).
+# DELL-XPS-9560-Ventura
+Working EFI for MacOS Monterey (up to Ventura). Lower OS versions were not tested but may work. Higher as well.
+Based on [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg) and old fork from [NOTNlCE-OpenCore](https://github.com/NOTNlCE/XPS-9560-OpenCore).
 
 ## Core features:
 - Fixed the issue when wrong BusID was chosen into SSDT-PNLF.aml. 
@@ -10,7 +10,7 @@ Based on [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg) & old fork fr
 - Updated Opencore to 1.0.0.
 
 ## What does work:
-Everything, except:
+Everything except -
 - GTX 1050. no metal support.
 - Headphones volume control buttons. 
 
