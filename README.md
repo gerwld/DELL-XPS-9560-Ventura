@@ -1,22 +1,24 @@
 # DELL-XPS-9560-Ventura
-Working EFI for MacOS Monterey (up to Ventura). Lower OS versions were not tested but may work. Higher as well.
+
+> Working XPS15-9560 Hackintosh OpenCore Config for MacOS Monterey (up to Ventura). Lower OS versions were not tested but may work. Higher as well.
 Based on [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg) and old fork from [NOTNlCE-OpenCore](https://github.com/NOTNlCE/XPS-9560-OpenCore).
 
 <img width="1680" alt="res" src="https://github.com/user-attachments/assets/c5460956-bcfc-440f-8963-abec6af55353">
 
 ## Core features:
 - Fixed the issue when wrong BusID was chosen into SSDT-PNLF.aml. 
-    Replace with the one in /Optional directory to check which one works best for you.
+    Replace with the one in `./Optional` directory to check which one works best for you.
 - Fixed EverythingGreen most common issues with Kaby Lake iGPU's.
 - Updated all kernel extensions to latest versions.
-- Updated Opencore to 1.0.0.
+- Updated Opencore to `1.0.0`.
 
 ## What does work:
-Everything except
-- <b>GTX 1050</b>. no metal support.
-- Headphones volume control buttons. 
+Everything, except:
+- <b>GTX 1050</b>. No metal support.
+- Headphones volume control buttons.
+- Stock Wi-Fi Card Killer Wireless 1535 __(DW1560 / DW1830 is a good m.2 alternative)__
 
-### How to begin:
+## Installation:
 - Install Opencore on your pendrive [(How to)](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/#making-the-installer).
 - Remove EFI folder and replace it with one from this build (do not merge!).
 - Choose  config.plist (4k, 1080). Rename it to config.plist.
@@ -29,7 +31,19 @@ Everything except
     EFI/OC/Opencore.efi. Save & exit.
 - Plug in your installation drive for MacOS. You can find tutorial how to make it [here](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/#making-the-installer)
 - Boot, select your installer and format your drive to APFS. At least 60gb is required. If you plan to add Windows later, create ExFat volume.
+- Disable Verbose `-v` arg after successful instalation in `config.plist` (optional)
+- Generate `SystemSerialNumber` and `SystemUUID` and set it on `congig.plist` (required)
 
+## Warning
+
+1. Don't turn on `FileValue Encryption`.
+2. Before using `OpenCore`, please make sure you have disabled `CFGlock`! If you don't disable `CFGLock`, you need change values of `AppleXcpmCfgLock` and `IgnoreInvalidFlexRatio` must be `True` or you will boot failure.
+
+## Pros of this build: 
+- Everything is up-to-date (Kexts, Drivers, Opencore).
+- ACPI > Kexts support.
+- SD Card / HDMI working properly.
+  
 ## Extra features and knowledge to make debugging easier:
 - If you have another Mac machine, you can use [OCLP](https://dortania.github.io/OpenCore-Legacy-Patcher/INSTALLER.html#creating-the-installer) to create base EFI partitions fast on pendrives.
 - FAT type also works as EFI boot option, but you dont have to mount the EFI partition each time to make some changes. Use `sudo diskutil eraseVolume FAT32 EFI /dev/diskXsY`
