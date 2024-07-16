@@ -32,7 +32,8 @@ Everything works, except:
 - Plug in your MacOS installation drive. You can find a tutorial on how to make it [here](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/#making-the-installer).
 - Boot, select your installer, and format your drive to APFS. At least 60GB is required. If you plan to add Windows later, create an ExFat volume.
 - Disable Verbose `-v` arg after successful installation in `config.plist` (optional).
-- Generate `SystemSerialNumber` and `SystemUUID` and set them in `config.plist` (required).
+- Generate <B>SMBIOS</B>:<br>
+    `SystemSerialNumber`, `Serial`, `Board Serial`, `Apple ROM` and `SystemUUID` and set them in `config.plist` (without it iCloud and AppStore wouldn't work).
 
 ## Warning:
 
