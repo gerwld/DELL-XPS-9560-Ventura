@@ -32,8 +32,8 @@ Everything except
 
 ## Extra features and knowledge to make debugging easier:
 - If you have another Mac machine, you can use [OCLP](https://dortania.github.io/OpenCore-Legacy-Patcher/INSTALLER.html#creating-the-installer) to create base EFI partitions fast on pendrives.
-- FAT type also works as EFI boot option, but you dont have to mount the EFI partition each time to make some changes.
-- Use (PlistEdit Pro)[https://www.fatcatsoftware.com/plisteditpro/] for editing .plist files, [MaciASL](https://github.com/acidanthera/MaciASL/releases/tag/1.6.4) for ACPI, and [Hackintool](https://github.com/benbaker76/Hackintool/releases) for general debuging and updates.
+- FAT type also works as EFI boot option, but you dont have to mount the EFI partition each time to make some changes. Use `sudo diskutil eraseVolume FAT32 EFI /dev/diskXsY`
+- Use [PlistEdit Pro](https://www.fatcatsoftware.com/plisteditpro/) for editing .plist files, [MaciASL](https://github.com/acidanthera/MaciASL/releases/tag/1.6.4) for ACPI, and [Hackintool](https://github.com/benbaker76/Hackintool/releases) for general debuging and updates.
 - For SMBIOS SN, Board ID generation [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) is quite good. You need it to make iMessages work.
 - SystemProductName value actually matters. Check everymac.com to find model that match your machine the best. For 9560 is usually MacbookPro14,3.
 - Don't be afraid to break anything, if it's already broken.
