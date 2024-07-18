@@ -53,4 +53,19 @@ Everything works, except:
 - The value of SystemProductName actually matters. Check everymac.com to find the model that best matches your machine, usually MacbookPro14,3 for the 9560.
 - Don't be afraid to break anything, if it's already broken.
 
+
+
 Also check the [NOTNlCE-OpenCore](https://github.com/NOTNlCE/XPS-9560-OpenCore) thread: https://www.tonymacx86.com/threads/guide-dell-xps-9560-ventura-opencore.324866/
+
+<br>
+<hr>
+
+### Troubleshooting (Post install):
+- If you lost your original Win EFI, the easiest way to restore it is <i>to resize ANY partition with Disk Utility under Mac</i> and create a `209mb FAT partition`.
+  Then simply follow this guide: https://www.youtube.com/watch?v=LILSaEGzhOg
+- You may disable the default BIOS programs to prevent them from breaking something, both `"Disable Pre-boot Help"` and `"Auto Recovery after 3 Failed Boots"`.
+- Do not delete other boot options, just uncheck them. Or system will recognize them shortly after and set one of them as the main boot option.
+- If you click on the space bar in Opencore, you will find `GRUBShell.efi` added to it. It can help you undervolt your CPU without downgrading (do so at your own risk).
+
+<br>
+<hr>
