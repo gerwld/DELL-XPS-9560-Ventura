@@ -18,6 +18,7 @@ Everything works, except:
 - Headphone volume control buttons.
 - Stock Wi-Fi Card Killer Wireless 1535 __(DW1560 / DW1830 is a good m.2 alternative)__
 
+
 ## Installation:
 - Install OpenCore on your pendrive [(How to)](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/#making-the-installer).
 - Remove the EFI folder and replace it with the one from this build (do not merge!).
