@@ -34,7 +34,7 @@ Everything works, except:
 - Boot, select your installer, and format your drive to APFS. At least 60GB is required. If you plan to add Windows later, create an ExFat volume.
 - Disable Verbose `-v` arg after successful installation in `config.plist` (optional).
 - Generate <B>SMBIOS</B>:<br>
-    `SystemSerialNumber`, `Serial`, `Board Serial`, `Apple ROM` and `SystemUUID` and set them in `config.plist` (without it iCloud and AppStore wouldn't work).
+    `SystemSerialNumber`, `Board Serial`, `Apple ROM` and `SystemUUID` and set them in `config.plist` (without it iCloud and AppStore wouldn't work).
 
 ## Warning:
 
