@@ -14,7 +14,7 @@ Based on [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg) and an old fo
 
 ## What works:
 Everything works, except:
-- <b>GTX 1050</b> (No support for both [Metal](https://en.wikipedia.org/wiki/Metal_(API)) and [Optimus](https://en.wikipedia.org/wiki/Nvidia_Optimus) technologies).
+- <b>GTX 1050</b> (No support for both [Metal API](https://en.wikipedia.org/wiki/Metal_(API)) and [Optimus technology](https://en.wikipedia.org/wiki/Nvidia_Optimus)).
 - Headphone volume control buttons.
 - Stock Wi-Fi Card Killer Wireless 1535 __(DW1560 / DW1830 is a good m.2 alternative)__
 
